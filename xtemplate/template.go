@@ -65,3 +65,7 @@ func ParseFiles(filenames ...string) (*Template, error) {
 	x, e := template.ParseFiles(filenames...)
 	return &Template{t: x}, e
 }
+
+func StringToHtml(data string) httpTemplate.HTML {
+	return httpTemplate.HTML(data)
+}
